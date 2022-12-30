@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/HomePage.module.css'
 import FloorSignage from '../components/floorSignage'
-import FlickerSignage from '../components/FlickerSignage'
+import FlickerSignage from '../components/flickerSignage'
 
 const inter = Inter({ subsets: ['latin'] })
 
