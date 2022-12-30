@@ -1,12 +1,17 @@
 import { useState } from "react";
 import styles from '../styles/components/floorSignage.module.css'
 
-const FloorSignage = ({ nice }) => {
+const FloorSignage = ({ language }) => {
 
     return (
-        <div >
-            <p>{nice}</p>
-        </div>
+        <>
+            <div className={styles.frontSign}>
+                <p>{language[0]}</p>
+            </div>
+            <div className={styles.backSign}>
+                <p>{language[0]}</p>
+            </div>
+        </>
     );
 };
 

@@ -21,7 +21,7 @@ export default function Home() {
           <p>hiiiiii</p>
           <p>hiiiiii</p>
           <FlickerSignage text="OPEN"/>
-          <FloorSignage nice="hi"/>
+          <FloorSignage language={["JS","HTML"]}/>
         </div>
       </main>
     </>
