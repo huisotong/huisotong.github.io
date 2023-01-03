@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [knownLanguages, setKnownLanguages] = useState(["JS", "HTML"])
+  const [knownLanguages, setKnownLanguages] = useState(["JS", "HTML","CSS","MySQL","NextJS","ReactJS"])
   const [typewriterText, setTypewriterText] = useState([
     "Pure CSS and JavaScript web page",
     "Built on NEXT.JS framework",
@@ -19,7 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (currentTypewriterText != knownLanguages.length - 1) {
+      if (currentTypewriterText != typewriterText.length - 1) {
         setCurrentTypewriterText((prevIndex) => prevIndex + 1);
       } else {
         setCurrentTypewriterText(0);

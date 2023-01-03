@@ -5,10 +5,17 @@ const FloorSignage = ({ language }) => {
   return (
     <>
       <div className={styles.frontSign}>
-        {language.map((element,index) => {
-          // eslint-disable-next-line react/jsx-key
-          return <p key={index}>{element}</p>;
-        })}
+        <div className={styles.frontSignBoard}>
+          <h1 className={styles.languages}>My Skills</h1>
+          {language.map((element, index) => {
+            // eslint-disable-next-line react/jsx-key
+            return (
+              <p className={styles.languages} key={index}>
+                {element}
+              </p>
+            );
+          })}
+        </div>
       </div>
       <div className={styles.backSign}></div>
     </>

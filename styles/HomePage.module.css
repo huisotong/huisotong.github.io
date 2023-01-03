@@ -46,3 +46,17 @@
   animation-duration: 1s;
   animation-timing-function: steps(1, end);
 }
+
+
+
+@keyframes caret {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
