@@ -4,10 +4,31 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/HomePage.module.css'
 import FloorSignage from '../components/floorSignage'
 import FlickerSignage from '../components/flickerSignage'
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [knownLanguages, setKnownLanguages] = useState(["JS", "HTML"])
+  const [typewriterText, setTypewriterText] = useState([
+    "Pure CSS and JavaScript web page",
+    "Built on NEXT.JS framework",
+  ]);
+  const [currentTypewriterText, setCurrentTypewriterText] = useState(0)
+  const [flickerSignage, setFlickerSignage] = useState("OPEN");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentTypewriterText != knownLanguages.length - 1) {
+        setCurrentTypewriterText((prevIndex) => prevIndex + 1);
+      } else {
+        setCurrentTypewriterText(0);
+      }
+    }, 8000);
+
+    return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentTypewriterText]);
   return (
     <>
       <Head>
@@ -16,14 +37,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main >
+      <main>
         <div className={styles.main}>
           <p>hiiiiii</p>
           <p>hiiiiii</p>
-          <FlickerSignage text="OPEN"/>
-          <FloorSignage language={["JS","HTML"]}/>
+          <h1 className={styles.h1}>
+            <span className={styles.testingText}>
+              {typewriterText[currentTypewriterText]}
+            </span>
+          </h1>
+
+          <FlickerSignage text={flickerSignage} />
+          <FloorSignage language={knownLanguages} />
         </div>
       </main>
     </>
-  )
+  );
 }

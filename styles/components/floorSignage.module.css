@@ -1,23 +1,27 @@
 .frontSign {
   position: fixed;
-  bottom: 0%;
-  left: ;
-  background-color: white;
-  color: black;
-  height: 30;
-  width: 10%;
-  transform: skewX(15deg);
-  z-index: 11;
+    bottom: 0%;
+    left: 104px;
+    background-color: rgb(230, 158, 65);
+    color: black;
+    height: 250px;
+    width: 160px;
+    /* height: 25%;
+    width: 10%; */
+    transform: skewX(10deg);
+    z-index: 11;
 }
 
 .backSign {
   position: fixed;
   bottom: 0%;
-  left: 0%;
-  background-color: grey;
+  left: 60px;
+  background-color: rgb(87, 60, 24);
   color: black;
-  height: 25%;
-  width: 10%;
-  transform: skewX(-15deg);
+  height: 250px;
+  width: 160px;
+  /* height: 25%;
+  width: 10%; */
+  transform: skewX(-10deg);
   z-index: 10;
 }
