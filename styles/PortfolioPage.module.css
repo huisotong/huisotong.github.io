@@ -12,7 +12,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  background-image: url("../public/backgroundImg.jpg");
+  background-image: url("./../public/backgroundImg.jpg");
   background-size: cover;
   color:white;
   z-index: 2;
