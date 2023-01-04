@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Anybody');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Garamond');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Mulish');
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-image: url("../public/backgroundImg.jpg");
+  background-size: cover;
+  color:white;
+  z-index: 2;
+}
+
+.buttonGroup {
+  z-index: 23;
+  right:15%;
+  position: fixed;
+  top: calc(50% - 100px);
+  display: block;
+  
+}
+.button {
+  font-family: 'EB Garamond';
+  display: block;
+  margin-bottom: 40px;
+  /* font-family: "Cormorant Garamond"; */
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  height: 70px;
+  border: 1px solid white;
+  transform: skewX(-10deg);
+}
+.button::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  height: 1px;
+  width: 178px;
+  left: 1px;
+  bottom: -23px;
+  border: 1px solid white;
+  transform: skewX(10deg);
+}
+.button::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  height: 66px;
+  width: 3px;
+  right: -4.8px;
+  top: 10px;
+  border-top: 5px solid white;
+  border-right: 1px solid white;
+  /* border: 1px solid white; */
+  /* transform: skewX(8deg) skewY(-81deg); */
+  transform: skewY(80deg);
+  /* content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  height: 25px;
+  width: 11px;
+  left: 195px;
+  bottom: 7px;
+  border-bottom: 5px solid white;
+  border-right: 1px solid white;
+  transform: skewX(10deg) skewY(-79deg); */
+}
+.button:hover{
+  transform: translate(0, 5px) skewX(-10deg);
+  transition:  transform 0.2s;
+}
+/* .button:hover::before {
+  transform: translate(0, 1px) skewX(10deg);
+  transition: transform 0.2s;
+} */
+.h1 {
+  font-family: 'Anybody';
+  font-size: 30px;
+  z-index: 20;
+}
+.background {
+  position: fixed;
+  background-color: black;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.mainText {
+  margin:auto;
+  min-height: 100px;
+  position: fixed;
+  left: 10%;
+  top: calc(50% - 50px);
+  font-family: 'Anybody';
+  font-size: 30px;
+  z-index: 20;
+}
+.mainWrap {
+  position: fixed;
+  border: 1px solid white;
+  top: 15%;
+  width: 86%;
+  height: 70%;
+  z-index: 21;
+}
+.typewriterText{
+  animation: typewriterTextAnimation;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 5s;
+  animation-timing-function: steps(22, end);
+  animation-iteration-count: infinite;
+}
+.typewriterText::after {
+  content: "|";
+  /* position: absolute; */
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes typewriterTextAnimation {
+
+  0%,
+  20%,
+  100% {
+    width: 0;
+  }
+
+  30%,
+  90% {
+    width: 100%;
+  }
+}
+
+@keyframes caret {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.buttonTesting {
+  font-family: 'EB Garamond';
+  /* font-family: "Cormorant Garamond"; */
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  height: 70px;
+  border: 1px solid white;
+}
+
+.buttonTesting::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  height: 1px;
+  width: 178px;
+  left: 1px;
+  bottom: -23px;
+  border: 1px solid white;
+  transform: skewX(10deg);
+}
+
+.buttonTesting::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  height: 25px;
+  width: 9px;
+  left: 195.7px;
+  bottom: 8px;
+  border-bottom: 5px solid white;
+  border-right: 1px solid white;
+  transform: skewX(8deg) skewY(-81deg);
+  /* content: "";
+  position: absolute;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  height: 25px;
+  width: 11px;
+  left: 195px;
+  bottom: 7px;
+  border-bottom: 5px solid white;
+  border-right: 1px solid white;
+  transform: skewX(10deg) skewY(-79deg); */
+}
+
+.buttonTesting:hover {
+  transform: translate(0, 5px) ;
+  transition: transform 0.2s;
+}

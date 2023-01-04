@@ -1,20 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/HomePage.module.css'
-import FloorSignage from '../components/floorSignage'
-import FlickerSignage from '../components/flickerSignage'
-import BarDesk from "../components/barDesk";
-import BarStool from "../components/barStool";
+import styles from "../styles/PortfolioPage.module.css";
 import { useEffect, useState } from "react";
+import navbarData from '../components/navBarData';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [knownLanguages, setKnownLanguages] = useState(["JS", "HTML","CSS","MySQL","NextJS","ReactJS"])
   const [typewriterText, setTypewriterText] = useState([
-    "Pure CSS and JavaScript web page",
-    "Built on NEXT.JS framework",
+    "Pure CSS and JS",
+    "Built on NEXT.JS",
   ]);
   const [currentTypewriterText, setCurrentTypewriterText] = useState(0)
   const [flickerSignage, setFlickerSignage] = useState("OPEN");
@@ -26,11 +23,16 @@ export default function Home() {
       } else {
         setCurrentTypewriterText(0);
       }
-    }, 8000);
-
+    }, 5000);
     return () => clearInterval(interval);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTypewriterText]);
+  // const divStyle = {
+  //   color: "blue",
+  //   backgroundImage: "url(" + "../public/backgroundImg.jpg" + ")",
+  //   layout:"fill"
+    
+  // };
   return (
     <>
       <Head>
@@ -41,18 +43,30 @@ export default function Home() {
       </Head>
       <main>
         <div className={styles.main}>
-          <p>hiiiiii</p>
-          <p>hiiiiii</p>
-          <h1 className={styles.h1}>
-            <span className={styles.testingText}>
+          <div className={styles.background}></div>
+          <div className={styles.mainWrap}></div>
+          {/* <h1 className={styles.h1}> */}
+          <div className={styles.mainText}>
+            <p>hiiiiii</p>
+            <p>{navbarData[0].label}</p>
+            <p className={styles.typewriterText}>
               {typewriterText[currentTypewriterText]}
-            </span>
-          </h1>
-
-          <FlickerSignage text={flickerSignage} />
-          <FloorSignage language={knownLanguages} />
-          <BarDesk />
-          <BarStool/>
+            </p>
+          </div>
+          {/* </h1> */}
+          <div className={styles.buttonGroup}>
+            {/* <button className={styles.button}>Click Me</button>
+            <button className={styles.button}>Click Me</button> */}
+            {/* <button className={styles.buttonTesting}>Click Me</button> */}
+            {navbarData.map((element, index) => {
+              // eslint-disable-next-line react/jsx-key
+              return (
+                <button className={styles.button} key={index}>
+                  {navbarData[index].label}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </main>
     </>

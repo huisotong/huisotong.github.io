@@ -12,6 +12,8 @@
   width: 10%; */
   transform: skewX(10deg);
   z-index: 11;
+  border-radius: 5px 5px 0px 0px;
+  /* border: 1px solid black; */
 }
 .frontSignBoard {
   position: fixed;
@@ -27,7 +29,6 @@
 }
 .languages {
   font-family: 'Overpass';
-  /* font-size: 30px; */
 }
 .backSign {
   position: fixed;
@@ -42,4 +43,5 @@
   transform: skewX(-10deg);
   background-image: linear-gradient(60deg,rgb(87, 60, 24),rgb(0, 0, 0));
   z-index: 10;
+  border-radius: 5px 5px 0px 0px;
 }

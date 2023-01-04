@@ -1,0 +1,22 @@
+.deskBody{
+    /* background-color: rgb(177, 109, 65); */
+    background-image: linear-gradient(rgb(177, 109, 65), rgb(82, 51, 30));
+    /* rgb(105, 66, 39) */
+    position: fixed;
+    height: 70px;
+    width: 60%;
+    right: 0;
+    bottom: 350px;
+    z-index: 15;
+    border-radius: 0px 0px 0px 200px;
+}
+.deskCounter {
+    /* background-color: rgb(196, 137, 97); */
+    background-image: linear-gradient(rgb(196, 137, 97), rgb(117, 73, 44));
+    position: fixed;
+    height: 360px;
+    width: calc(60% - 60px);
+    right: 0;
+    bottom: 0;
+    z-index: 14;
+}
