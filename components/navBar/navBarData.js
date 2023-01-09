@@ -1,11 +1,15 @@
 const NavbarData = [
   {
+    label: "Home",
+    link: "/portfolio",
+  },
+  {
     label: "About me",
-    link: "/about",
+    link: "/portfolio/about",
   },
   {
     label: "Projects",
-    link: "/projects",
+    link: "/portfolio/projects",
   },
 ];
 

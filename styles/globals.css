@@ -1,4 +1,9 @@
 :root {
+
+  --projectSelectorDateColour:rgb(255, 97, 123);
+  --projectSelectorDateShadow:rgb(143, 28, 47);
+
+
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',

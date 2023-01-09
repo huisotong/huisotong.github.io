@@ -1,0 +1,163 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+    /* background-image: url("../public/backgroundImg.jpg"); */
+    background-image: url("/backgroundImg.jpg");
+    background-size: cover;
+    color: white;
+    z-index: 2;
+}
+
+.background {
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.mainWrap {
+    position: fixed;
+    border: 1px solid white;
+    /* background-color: rgb(109, 84, 38); */
+    /* background-color: rgb(100, 81, 46); */
+    top: 15%;
+    /* top: 7%; */
+    width: 86%;
+    height: 70%;
+    /* height: 86%; */
+    z-index: 4;
+}
+.navBar {
+    position: fixed;
+    display: inline;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    bottom: calc(85% + 1px);
+    left: 7%;
+    z-index: 5;
+    /* min-height: 100px; */
+    width: 86%;
+    min-width: 100px;
+    text-align: left;
+}
+.navBarTab {
+    transition: transform 0.2s;
+    font-family: 'EB Garamond';
+    margin-bottom: 40px;
+    /* font-family: "Cormorant Garamond"; */
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 70px;
+    border: 1px solid white;
+    transform: skewX(-10deg) scale(0.8);
+}
+/* translateX(-25%) */
+.navBarTab::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    height: 1px;
+    width: 178px;
+    left: 1px;
+    bottom: -23px;
+    border: 1px solid white;
+    transform: skewX(10deg) ;
+}
+
+.navBarTab::after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    height: 66px;
+    width: 3px;
+    right: -4.8px;
+    top: 10px;
+    border-top: 5px solid white;
+    border-right: 1px solid white;
+    transform: skewY(80deg);
+}
+
+.navBarTab:hover {
+    transform: translate(0, 5px) skewX(-10deg) scale(0.8);
+}
+
+.navBarTab:active {
+    transform: translate(0, 10px) skewX(-10deg) scale(0.8);
+}
+
+.navBarTabActive {
+    transition: transform 0.2s;
+    font-family: 'EB Garamond';
+    margin-bottom: 40px;
+    /* font-family: "Cormorant Garamond"; */
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 70px;
+    border: 1px solid white;
+    transform: skewX(-10deg) scale(0.8) translateX(-25%);
+}
+
+.navBarTabActive::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    height: 1px;
+    width: 178px;
+    left: 1px;
+    bottom: -23px;
+    border: 1px solid white;
+    transform: skewX(10deg) ;
+}
+
+.navBarTabActive::after {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    height: 66px;
+    width: 3px;
+    right: -4.8px;
+    top: 10px;
+    border-top: 5px solid white;
+    border-right: 1px solid white;
+    transform: skewY(80deg);
+}
+
+.navBarTabActive:hover {
+    transform: translate(0, 5px) skewX(-10deg) scale(0.8) translateX(-25%);
+}
+
+.navBarTabActive:active {
+    transform: translate(0, 10px) skewX(-10deg) scale(0.8) translateX(-25%);
+}
