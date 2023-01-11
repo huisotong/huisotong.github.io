@@ -1,7 +1,51 @@
-:root {
 
-  --projectSelectorDateColour:rgb(255, 97, 123);
-  --projectSelectorDateShadow:rgb(143, 28, 47);
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.623);
+  border-radius: 5px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+:root {
+  /* --projectSelectorDateColour: #ec9c98;
+  --projectSelectorDateBorder: #8f5753;
+  --projectSelectorDateBorderRadius: 5px;
+  --projectSelectorDateShadow:#c2726d;
+  --projectSelectorDateShadowBorder: #8f5f5c;
+  --projectSelectorDateShadowRadius: 5px; */
+  /* CC7772 *//* 8f5753 */
+
+  /* --projectSelectorDateColour: #CC7772;
+  --projectSelectorDateBorder: #CC7772;
+  --projectSelectorDateBorderRadius: 5px;
+  --projectSelectorDateShadow:#663C39;
+  --projectSelectorDateShadowBorder: #663C39;
+  --projectSelectorDateShadowRadius: 5px; */
+
+  --projectSelectorDateColour: transparent;
+  --projectSelectorDateBorder: white;
+  --projectSelectorDateBorderRadius: 5px;
+  --projectSelectorDateShadow:transparent;
+  --projectSelectorDateShadowBorder: white;
+  --projectSelectorDateShadowRadius: 0px 0px 5px 5px;
+
+
+  /* --projectSelectorDateColour:rgb(255, 97, 123);
+  --projectSelectorDateShadow:rgb(143, 28, 47); */
 
 
   --max-width: 1100px;

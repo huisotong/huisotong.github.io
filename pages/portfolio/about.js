@@ -19,7 +19,7 @@ export default function About() {
       <main>
         <div className={styles.mainText}>
           <h1>About me</h1>
-          <br/>
+          <br />
           <p>Hi there!</p>
           <p>
             Throughout my journey in Republic Polytecnic pursuing the Diploma of
@@ -29,9 +29,12 @@ export default function About() {
             intrigued me. Since then, I&lsquo;ve started to do some
             self-learning and have taken part in 3 projects, one being my
             final-year-project, second during my internship and lastly, this
-            website
+            website.
           </p>
-          
+          <br />
+          <p>
+            As I continue to grow, I hope to be given opportunities to aid in honing my skills and I believe that I would be able to become a meaningful asset to your organisation
+          </p>
         </div>
       </main>
     </>

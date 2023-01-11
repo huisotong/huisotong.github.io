@@ -4,9 +4,42 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
 @import url('https://fonts.googleapis.com/css?family=Mulish');
 
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
 
+    50% {
+        opacity: 0.5;
+    }
 
+    100% {
+        margin-top: 20%;
+        opacity: 0;
+        display: none;
+    }
+}
 
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 20%;
+        display: contents;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        margin-top: 0%;
+        opacity: 1;
+    }
+}
 /* Mulish  Anybody  Montserrat  Cormorant+Garamond EB+Garamond*/
 .mainText {
     margin: auto;
@@ -16,12 +49,8 @@
     width: 86%;
     height: 50%;
     left: 15%;
-    /* left: 15%;
-    top: calc(50% - 190px); */
-     /* font-size: 30px; */
-     /* top: calc(50% - 208px); */
     font-family: 'Mulish';
-    font-size: 2vw;
+    font-size: 1.8vw;
     z-index: 20;
     width: 70%;
     overflow: auto;
@@ -33,175 +62,84 @@
     width: 86%;
     height: 12%;
     left: 15%;
-    /* font-family: 'Mulish';
-    font-size: 2vw; */
     z-index: 20;
     width: 70%;
 }
-.projectSelectorName1 {
+.projectSelectorName1, .projectSelectorName2, .projectSelectorName3 {
     width: 20%;
     position: absolute;
+    text-align: center;
+}
+
+.projectSelectorName1 {
     left: 0%;
-    text-align:center;
 }
 .projectSelectorName2 {
-    width: 20%;
-    position: absolute;
     left: 40%;
-    text-align: center;
 }
 .projectSelectorName3 {
-    width: 20%;
-    position: absolute;
     right: 0%;
-    text-align: center;
 }
-.projectSelectorDateFront1 {
-    transition: 150ms cubic-bezier(0, 0, 0.6, 1);
-    width: 102%;
+.projectSelectorDateFront, .projectSelectorDateLowerBorder{
+    width: calc(100% + 4px);
     position: absolute;
-    left: -1%;
-    bottom: 15%;
-    text-align: center;
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 1%;
-    border-radius: 5px;
-    color: white;
-    height: 114%;
-    z-index: 20;
-    cursor: pointer;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    letter-spacing: 1px;
-    /* box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.35); */
-}
-
-.projectSelectorDate1 {
-    width: 20%;
-    position: absolute;
-    left: 0%;
-    text-align: center;
-    bottom: 10%;
-    background-color: transparent;
-    border: 2px solid white;
-    border-top: 2px solid transparent;
-    letter-spacing: 1px;
-    padding: 1%;
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Montserrat';
-    height: 30%;
-    cursor: pointer;
-
-}
-
-
-
-
-
-.projectSelectorDateFront2 {
-    transition: 150ms cubic-bezier(0, 0, 0.6, 1);
-    width: 102%;
-    position: absolute;
-    left: -1%;
-    bottom: 15%;
+    left: calc(0% - 2px);
     text-align: center;
     background-color: var(--projectSelectorDateColour);
-    border: 2px solid var(--projectSelectorDateColour);
     padding: 1%;
-    border-radius: 5px;
-    color: white;
-    height: 114%;
-    z-index: 20;
     cursor: pointer;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    letter-spacing: 1px;
-    /* box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.35); */
 }
-.projectSelectorDateFront3 {
-    transition: 150ms cubic-bezier(0, 0, 0.6, 1);
-    width: 102%;
-    position: absolute;
-    left: -1%;
+.projectSelectorDateFront {
     bottom: 15%;
-    text-align: center;
-    background-color: var(--projectSelectorDateColour);
-    border: 2px solid var(--projectSelectorDateColour);
-    padding: 1%;
-    border-radius: 5px;
+    border: 2px solid var(--projectSelectorDateBorder);
+    border-radius: var(--projectSelectorDateBorderRadius);
     color: white;
     height: 114%;
     z-index: 20;
-    cursor: pointer;
     font-family: 'Montserrat';
     font-weight: 600;
     letter-spacing: 1px;
-    /* box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.35); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms cubic-bezier(0, 0, 0.6, 1);
 }
-
-/* .projectSelectorDate1 {
-    width: 20%;
-    position: absolute;
-    left: 0%;
-    text-align: center;
-    bottom: 10%;
-    background-color: var(--projectSelectorDateShadow);
-    border: 2px solid var(--projectSelectorDateShadow);
-    letter-spacing:1px;
-    padding: 1%;
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Montserrat';
-    height: 30%;
-    cursor: pointer;
+.projectSelectorDateLowerBorder {
+    bottom: -8%;
+    border: 2px solid white;
+    border-top: 2px solid var(--projectSelectorDateShadow);
+    border-radius: var(--projectSelectorDateBorderRadius);
+    height: 100%;
+    z-index: 20;
     
-} */
-.projectSelectorDate1:active .projectSelectorDateFront1 {
-    bottom: -8%;
 }
-
+.projectSelectorDate1, .projectSelectorDate2, .projectSelectorDate3 {
+    width: 20%;
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    background-color: var(--projectSelectorDateShadow);
+    border: 2px solid var(--projectSelectorDateShadow);
+    padding: 1%;
+    height: 30%;
+    cursor: pointer;
+}
+.projectSelectorDate1 {
+    left: 0%;
+}
 .projectSelectorDate2 {
-    width: 20%;
-    position: absolute;
     left: 40%;
-    text-align: center;
-    bottom: 10%;
-    background-color: var(--projectSelectorDateShadow);
-    border: 2px solid var(--projectSelectorDateShadow);
-    letter-spacing:1px;
-    padding: 1%;
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Montserrat';
-    height: 30%;
-    cursor: pointer;
 }
-.projectSelectorDate2:active .projectSelectorDateFront2 {
-    bottom: -8%;
+.projectSelectorDate3 {
+    right: 0%;
 }
 
-.projectSelectorDate3 {
-    width: 20%;
-    position: absolute;
-    right: 0%;
-    text-align: center;
-    bottom: 10%;
-    background-color: var(--projectSelectorDateShadow);
-    border: 2px solid var(--projectSelectorDateShadow);
-    letter-spacing:1px;
-    padding: 1%;
-    font-weight: 600;
-    border-radius: 5px;
-    color: white;
-    font-family: 'Montserrat';
-    height: 30%;
-    cursor: pointer;
+.projectSelectorDate1:active .projectSelectorDateFront {
+    bottom: -8%;
 }
-.projectSelectorDate3:active .projectSelectorDateFront3 {
+.projectSelectorDate2:active .projectSelectorDateFront {
+    bottom: -8%;
+}
+.projectSelectorDate3:active .projectSelectorDateFront {
     bottom: -8%;
 }
