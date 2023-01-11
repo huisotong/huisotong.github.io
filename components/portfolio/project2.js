@@ -5,7 +5,50 @@ import quickView from "../../public/projects/project2/quickView.jpg";
 import checkout from "../../public/projects/project2/checkout.jpg";
 import cardDetails from "../../public/projects/project2/cardDetails.jpg";
 import cart from "../../public/projects/project2/cart.jpg";
+import { useState } from "react";
 const Project2 = ({ activeProjectIndex, projectData }) => {
+  const projectImages = [
+    {
+      src: mainPage,
+      alt: "Picture of the main page",
+      width: 587,
+      height: 407,
+    },
+    {
+      src: quickView,
+      alt: "Picture of the quick view modal",
+      width: 384,
+      height: 268,
+    },
+    {
+      src: cart,
+      alt: "Picture of the cart component",
+      width: 587,
+      height: 407,
+    },
+    {
+      src: checkout,
+      alt: "Picture of the checkout page",
+      width: 587,
+      height: 407,
+    },
+    {
+      src: cardDetails,
+      alt: "Picture of the card details form",
+      width: 587,
+      height: 407,
+    },
+  ];
+  const [activePicture, setActivePicture] = useState(0);
+  const handlePictureChange = (index) => {
+    if (index === projectImages.length) {
+      setActivePicture(0);
+    } else if (index < 0) {
+      setActivePicture(projectImages.length - 1);
+    } else {
+      setActivePicture(index);
+    }
+  };
   return (
     <div
       className={styles.mainText}
@@ -17,7 +60,7 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
     >
       <h2>{projectData[1].name}</h2>
       <p>
-        Link to demo{" "}
+        Built on React.Js, HTML {"&"} CSS. Link to demo{" "}
         <a
           target="_blank"
           href="https://ecommercewebsite.huisotong.repl.co/"
@@ -45,29 +88,55 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
           <br />
           - Checkout Page
           <br />
-          <Image
-            src={mainPage}
-            alt="Picture of the main page"
-            style={{
-              float: "left",
-              marginRight: "10px",
-              marginTop: "10px",
-            }}
-            width={587}
-            height={407}
-            quality={100}
-          />
-          <Image
-            src={quickView}
-            alt="Picture of the main page"
-            style={{
-              float: "left",
-              marginRight: "10px",
-              marginTop: "10px",
-            }}
-            width={384}
-            height={268}
-          />
+        </small>
+      </p>
+      <div
+        className={styles.pictureContainer}
+        style={{
+          width: projectImages[activePicture].width,
+          height: projectImages[activePicture].height,
+        }}
+      >
+        <button
+          className={styles.buttonPictureLeft}
+          style={{
+            height: projectImages[activePicture].height,
+          }}
+          onClick={() => {
+            handlePictureChange(activePicture - 1);
+          }}
+        >
+          {"<"}
+        </button>
+
+        <Image
+          src={projectImages[activePicture].src}
+          alt="Picture of the main page"
+          style={{
+            display: "inline",
+          }}
+          width={projectImages[activePicture].width}
+          height={projectImages[activePicture].height}
+        />
+        <button
+          className={styles.buttonPictureRight}
+          style={{
+            right: `calc(50% - (${projectImages[activePicture].width}px)/2)`,
+            height: projectImages[activePicture].height,
+          }}
+          onClick={() => {
+            handlePictureChange(activePicture + 1);
+          }}
+        >
+          {">"}
+        </button>
+      </div>
+      <p>
+        <small>
+          Since I was busy with my current project, I decided to challenge
+          myself to complete the task within 3 days. I was encouraged to use
+          bootstrap so I quickly went through the react bootstrap documentations
+          and utilised it in the website
         </small>
       </p>
     </div>

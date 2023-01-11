@@ -6,6 +6,7 @@ import checkout from "../../public/projects/project2/checkout.jpg";
 import cardDetails from "../../public/projects/project2/cardDetails.jpg";
 import cart from "../../public/projects/project2/cart.jpg";
 const Project2 = ({ activeProjectIndex, projectData }) => {
+  
   return (
     <div
       className={styles.mainText}

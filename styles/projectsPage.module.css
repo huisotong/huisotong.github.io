@@ -40,6 +40,27 @@
         opacity: 1;
     }
 }
+.buttonPictureLeft, .buttonPictureRight{
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    border: 0px solid white;
+    width: 80px;
+    cursor: pointer;
+}
+.buttonPictureLeft:hover {
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.buttonPictureRight:hover {
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.pictureContainer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Mulish  Anybody  Montserrat  Cormorant+Garamond EB+Garamond*/
 .mainText {
     margin: auto;

@@ -20,7 +20,7 @@ const Project1 = ({ activeProjectIndex, projectData }) => {
     >
       <div>
         <h2>{projectData[0].name}</h2>
-        <p>Built on React.JS, HTML and css!</p>
+        <p>Built on React.Js, HTML {"&"} CSS!</p>
         <br />
         <p>
           <small>
