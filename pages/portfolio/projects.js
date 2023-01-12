@@ -56,7 +56,7 @@ export default function Projects() {
         </div>
         <div className={styles.projectCycleRightContainer}>
           <button
-            className={styles.projectCycleNavigationButton}
+            className={styles.projectCycleNavigationButtonRight}
             style={
               projectCycle ===
               (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
