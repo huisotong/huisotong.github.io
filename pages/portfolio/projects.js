@@ -9,6 +9,7 @@ import ProjectData from "../../components/portfolio/projectData";
 import Project1 from "../../components/portfolio/project1";
 import Project2 from "../../components/portfolio/project2";
 import Project3 from "../../components/portfolio/project3";
+import Project4 from "../../components/portfolio/project4";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Projects() {
@@ -35,16 +36,33 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className={styles.projectSelector}>
+        <div className={styles.projectCycleLeftContainer}>
           <button
+            className={styles.projectCycleNavigationButton}
+            style={projectCycle === 1 ? { opacity: "0.5" } : { opacity: "1" }}
             disabled={projectCycle === 1 ? true : false}
             onClick={() => {
               handleProjectCycleChange("backward", projectCycle);
             }}
           >
-            backward
+            <Image
+              src="/leftArrow.svg"
+              alt="LeftArrow Icon"
+              className={styles.projectCycleNavigationButtonIcon}
+              width={50}
+              height={50}
+            />
           </button>
+        </div>
+        <div className={styles.projectCycleRightContainer}>
           <button
+            className={styles.projectCycleNavigationButton}
+            style={
+              projectCycle ===
+              (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
+                ? { opacity: "0.5" }
+                : { opacity: "1" }
+            }
             disabled={
               projectCycle ===
               (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
@@ -55,8 +73,16 @@ export default function Projects() {
               handleProjectCycleChange("forward", projectCycle);
             }}
           >
-            forward
+            <Image
+              src="/rightArrow.svg"
+              alt="RightArrow Icon"
+              className={styles.projectCycleNavigationButtonIcon}
+              width={50}
+              height={50}
+            />
           </button>
+        </div>
+        <div className={styles.projectSelector}>
           {ProjectData.map((element, index) => {
             // eslint-disable-next-line react/jsx-key
             if (
@@ -134,6 +160,11 @@ export default function Projects() {
         />
 
         <Project3
+          activeProjectIndex={activeProjectIndex}
+          projectData={ProjectData}
+        />
+
+        <Project4
           activeProjectIndex={activeProjectIndex}
           projectData={ProjectData}
         />

@@ -42,6 +42,7 @@
   --projectSelectorDateShadow:transparent;
   --projectSelectorDateShadowBorder: white;
   --projectSelectorDateShadowRadius: 0px 0px 5px 5px;
+  --projectSelectorDateHeight: 40%;
 
 
   /* --projectSelectorDateColour:rgb(255, 97, 123);

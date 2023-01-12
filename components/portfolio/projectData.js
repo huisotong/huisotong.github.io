@@ -13,20 +13,8 @@ const ProjectData = [
     date: "12/09/2022",
   },
   {
-    name: "Portfolio Webite",
+    name: "Portfolio Website",
     date: "07/04/2022",
-  },
-  {
-    name: "MOCK",
-    date: "08/04/2022",
-  },
-  {
-    name: "MOCK",
-    date: "09/04/2022",
-  },
-  {
-    name: "MOCK",
-    date: "10/04/2022",
   },
 ];
 
