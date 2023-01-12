@@ -17,26 +17,26 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
     {
       src: quickView,
       alt: "Picture of the quick view modal",
-      width: 384,
-      height: 268,
+      width: 588,
+      height: 420,
     },
     {
       src: cart,
       alt: "Picture of the cart component",
-      width: 587,
-      height: 407,
+      width: 587.5,
+      height: 407.5,
     },
     {
       src: checkout,
       alt: "Picture of the checkout page",
-      width: 587,
-      height: 407,
+      width: 588.5,
+      height: 406,
     },
     {
       src: cardDetails,
       alt: "Picture of the card details form",
       width: 587,
-      height: 407,
+      height: 407.5,
     },
   ];
   const [activePicture, setActivePicture] = useState(0);

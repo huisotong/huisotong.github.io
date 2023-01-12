@@ -18,22 +18,30 @@ export default function About() {
       </Head>
       <main>
         <div className={styles.mainText}>
-          <h1>About me</h1>
+          {/* <h1>About me</h1> */}
+          <h1>Hi there!</h1>
           <br />
-          <p>Hi there!</p>
+          {/* <p>Hi there!</p> */}
           <p>
             Throughout my journey in Republic Polytecnic pursuing the Diploma of
             information technology, I&lsquo;ve been exploring different
             applications of IT and where my interest would be in. By the end of
             year 2, I found that there was something in programming that
-            intrigued me. Since then, I&lsquo;ve started to do some
-            self-learning and have taken part in 3 projects, one being my
-            final-year-project, second during my internship and lastly, this
-            website.
+            intrigued me.
+            <br />
+            <br />
+            Since then, I&lsquo;ve started to do some self-learning and have
+            taken part in 4 projects, one being my final-year-project, second
+            during my final-year-project , third during my internship and
+            lastly, this website. I love that most of my projects had been a
+            challenge to me, for instance, an unknown framework or language and
+            I managed to pull through all of them.
           </p>
           <br />
           <p>
-            As I continue to grow, I hope to be given opportunities to aid in honing my skills and I believe that I would be able to become a meaningful asset to your organisation
+            As I continue to grow, I hope to be given opportunities to aid in
+            honing my skills and I believe that I would be able to become a
+            meaningful asset to your organisation
           </p>
         </div>
       </main>

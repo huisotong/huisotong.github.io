@@ -78,9 +78,9 @@ const Project1 = ({ activeProjectIndex, projectData }) => {
             <br />
             <u>Tasks</u>
             <br />
-            Without any prior knowledge on Javascript, HTML or css, I had
-            quickly skim through documentations and set up the base application
-            to work on within the first week. Subsquently, I was tasked to
+            Without any prior knowledge of Javascript, HTML or CSS, I had
+            quickly skim through documentation and set up the base application
+            to work on within the first week. Subsequently, I was tasked to
             create the Navigation Bar, main Opportunities listing page,
             Opportunity details page, Favourites page, making review page and a
             page for users to monitor the state of applications. I was also in
