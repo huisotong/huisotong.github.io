@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/projectsPage.module.css";
+import styles from "../../styles/ProjectsPage.module.css";
 import mainPage from "../../public/projects/project2/main.jpg";
 import quickView from "../../public/projects/project2/quickView.jpg";
 import checkout from "../../public/projects/project2/checkout.jpg";

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../../styles/projectsPage.module.css";
+import styles from "../../styles/ProjectsPage.module.css";
 import { useEffect, useState } from "react";
 // import videoDemo from "../../public/projects/project1/videoDemo.mp4";
 
@@ -12,40 +12,20 @@ import Project3 from "../../components/portfolio/project3";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Projects() {
-  const projectInfo = [
-    {
-      name: "YouthxIndustry Web Platform",
-      date: "07/04/2022",
-    },
-    {
-      name: "E-commerce Website",
-      date: "12/09/2022",
-    },
-    {
-      name: "POS system",
-      date: "12/09/2022",
-    },
-  ];
-  const projectInfo1 = [
-    {
-      name: "YouthxIndustry Web Platform",
-      date: "07/04/2022",
-      html: `<p>
-            Throughout my journey in Republic Polytecnic pursuing the Diploma of
-            information technology, I&lsquo;ve been exploring different
-            applications of IT and where my interest would be in. By the end of
-            year 2, I found that there was something in programming that
-            intrigued me. Since then, I&lsquo;ve started to do some
-            self-learning and have taken part in 3 projects, one being my
-            final-year-project, second during my internship and lastly, this
-            website
-          </p>`,
-    }
-  ];
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [previousProjectIndex, setPreviousProjectIndex] = useState(-1);
-  const [test, setTest] = useState(false);
+  const [projectCycle, setProjectCycle] = useState(1);
 
+  const handleProjectCycleChange = (direction, projectCycle) => {
+    if (direction === "forward") {
+      setProjectCycle(projectCycle + 1);
+      console.log(`${projectCycle} * 3-3 = ${projectCycle * 3 - 3}`);
+      setActiveProjectIndex((projectCycle + 1) * 3 - 3);
+    } else if (direction === "backward") {
+      setProjectCycle(projectCycle - 1);
+      setActiveProjectIndex((projectCycle - 1) * 3 - 3);
+    }
+  };
   return (
     <>
       <Head>
@@ -56,47 +36,91 @@ export default function Projects() {
       </Head>
       <main>
         <div className={styles.projectSelector}>
+          <button
+            disabled={projectCycle === 1 ? true : false}
+            onClick={() => {
+              handleProjectCycleChange("backward", projectCycle);
+            }}
+          >
+            backward
+          </button>
+          <button
+            disabled={
+              projectCycle ===
+              (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
+                ? true
+                : false
+            }
+            onClick={() => {
+              handleProjectCycleChange("forward", projectCycle);
+            }}
+          >
+            forward
+          </button>
           {ProjectData.map((element, index) => {
             // eslint-disable-next-line react/jsx-key
-            return (
-              <p
-                className={styles[`projectSelectorName${index + 1}`]}
-                key={index}
-              >
-                {ProjectData[index].name}
-              </p>
-            );
-          })}
-          <p>{activeProjectIndex}</p>
-          {ProjectData.map((element, index) => {
-            // eslint-disable-next-line react/jsx-key
-            return (
-              <button
-                className={styles[`projectSelectorDate${index + 1}`]}
-                key={index}
-                onClick={() => {
-                  setActiveProjectIndex(index);
-                }}
-              >
-                <span
-                  className={styles.projectSelectorDateFront}
-                  style={
-                    activeProjectIndex === index
-                      ? {
-                          backgroundColor: "white",
-                          color: "black",
-                        }
-                      : {
-                          backgroundColor: "transparent",
-                          color: "white",
-                        }
+            if (
+              index + 1 <= projectCycle * 3 &&
+              index + 1 >= projectCycle * 3 - 2
+            ) {
+              return (
+                <p
+                  className={
+                    styles[
+                      `projectSelectorName${
+                        (index + 1) % 3 === 0 ? 3 : (index + 1) % 3
+                      }`
+                    ]
                   }
+                  key={index}
                 >
-                  {ProjectData[index].date}
-                </span>
-                <span className={styles.projectSelectorDateLowerBorder}></span>
-              </button>
-            );
+                  {ProjectData[index].name}
+                </p>
+              );
+            }
+          })}
+          {ProjectData.map((element, index) => {
+            // eslint-disable-next-line react/jsx-key
+            if (
+              index + 1 <= projectCycle * 3 &&
+              index + 1 >= projectCycle * 3 - 2
+            ) {
+              return (
+                <button
+                  className={
+                    styles[
+                      `projectSelectorDate${
+                        (index + 1) % 3 === 0 ? 3 : (index + 1) % 3
+                      }`
+                    ]
+                  }
+                  key={index}
+                  onClick={() => {
+                    setActiveProjectIndex(index);
+                  }}
+                >
+                  <span
+                    className={styles.projectSelectorDateFront}
+                    style={
+                      activeProjectIndex === index
+                        ? {
+                            backgroundColor: "white",
+                            color: "black",
+                          }
+                        : {
+                            backgroundColor: "transparent",
+                            color: "white",
+                          }
+                    }
+                  >
+                    {ProjectData[index].date}
+                  </span>
+                  <span
+                    className={styles.projectSelectorDateLowerBorder}
+                  ></span>
+                </button>
+              );
+            }
           })}
         </div>
         <Project1
