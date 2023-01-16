@@ -45,13 +45,13 @@ export default function Projects() {
               handleProjectCycleChange("backward", projectCycle);
             }}
           >
-            <Image
+            {/* <Image
               src="/leftArrow.svg"
               alt="LeftArrow Icon"
               className={styles.projectCycleNavigationButtonIcon}
               width={50}
               height={50}
-            />
+            /> */}
           </button>
         </div>
         <div className={styles.projectCycleRightContainer}>
@@ -73,13 +73,13 @@ export default function Projects() {
               handleProjectCycleChange("forward", projectCycle);
             }}
           >
-            <Image
+            {/* <Image
               src="/rightArrow.svg"
               alt="RightArrow Icon"
               className={styles.projectCycleNavigationButtonIcon}
               width={50}
               height={50}
-            />
+            /> */}
           </button>
         </div>
         <div className={styles.projectSelector}>
