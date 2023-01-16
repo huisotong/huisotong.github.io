@@ -9,6 +9,7 @@
 
 /* Mulish  Anybody  Montserrat  Cormorant+Garamond EB+Garamond*/
 .mainText {
+  color: white;
   margin:auto;
   min-height: 100px;
   position: fixed;
