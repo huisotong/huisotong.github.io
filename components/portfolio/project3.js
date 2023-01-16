@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/ProjectsPage.module.css";
+import styles from "../../styles/projectsPage.module.css";
 import cancelModal from "../../public/projects/project3/cancelModal.jpg";
 import cashierPage from "../../public/projects/project3/cashierPage.jpg";
 import paymentModal from "../../public/projects/project3/paymentModal.jpg";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "@next/font/google";
-import styles from "../../styles/ProjectsPage.module.css";
+import styles from "../../styles/projectsPage.module.css";
 import { useEffect, useState } from "react";
 import navbarData from "../navBar/navBarData";
 import opportunitiesPage from "../../public/projects/project1/opportunitiesPage.jpg";
