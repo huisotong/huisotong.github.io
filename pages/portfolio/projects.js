@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 import ProjectData from "../../components/portfolio/projectData";
 import Project1 from "../../components/portfolio/project1";
 import Project2 from "../../components/portfolio/project2";
-import Project3 from "../../components/portfolio/Project3";
-import Project4 from "../../components/portfolio/Project4";
+import Project3 from "../../components/portfolio/project3";
+import Project4 from "../../components/portfolio/project4";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Projects() {
