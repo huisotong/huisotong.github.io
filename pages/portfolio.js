@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import styles from "../styles/PortfolioPage.module.css";
 import { useEffect, useState } from "react";
 import navbarData from "../components/navBar/navBarData";
-import SkillsData from "../components/skills/SkillsData";
+import SkillsData from "../components/skills/skillsData";
 
 const inter = Inter({ subsets: ["latin"] });
 
