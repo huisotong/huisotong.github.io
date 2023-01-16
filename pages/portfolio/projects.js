@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 // import videoDemo from "../../public/projects/project1/videoDemo.mp4";
 
 import ProjectData from "../../components/portfolio/projectData";
-import Project1 from "../../components/portfolio/project1";
+import Project1 from "../../components/portfolio/Project1";
 import Project2 from "../../components/portfolio/project2";
 import Project3 from "../../components/portfolio/project3";
 import Project4 from "../../components/portfolio/project4";
@@ -59,13 +59,13 @@ export default function Projects() {
             className={styles.projectCycleNavigationButtonRight}
             style={
               projectCycle ===
-              (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
+                (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
                 ? { opacity: "0.5" }
                 : { opacity: "1" }
             }
             disabled={
               projectCycle ===
-              (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
+                (ProjectData.length - (ProjectData.length % 3)) / 3 + 1
                 ? true
                 : false
             }
@@ -93,9 +93,8 @@ export default function Projects() {
                 <p
                   className={
                     styles[
-                      `projectSelectorName${
-                        (index + 1) % 3 === 0 ? 3 : (index + 1) % 3
-                      }`
+                    `projectSelectorName${(index + 1) % 3 === 0 ? 3 : (index + 1) % 3
+                    }`
                     ]
                   }
                   key={index}
@@ -115,9 +114,8 @@ export default function Projects() {
                 <button
                   className={
                     styles[
-                      `projectSelectorDate${
-                        (index + 1) % 3 === 0 ? 3 : (index + 1) % 3
-                      }`
+                    `projectSelectorDate${(index + 1) % 3 === 0 ? 3 : (index + 1) % 3
+                    }`
                     ]
                   }
                   key={index}
@@ -130,13 +128,13 @@ export default function Projects() {
                     style={
                       activeProjectIndex === index
                         ? {
-                            backgroundColor: "white",
-                            color: "black",
-                          }
+                          backgroundColor: "white",
+                          color: "black",
+                        }
                         : {
-                            backgroundColor: "transparent",
-                            color: "white",
-                          }
+                          backgroundColor: "transparent",
+                          color: "white",
+                        }
                     }
                   >
                     {ProjectData[index].date}
