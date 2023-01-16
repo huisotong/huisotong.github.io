@@ -6,7 +6,7 @@ import checkout from "../../public/projects/project2/checkout.jpg";
 import cardDetails from "../../public/projects/project2/cardDetails.jpg";
 import cart from "../../public/projects/project2/cart.jpg";
 import { useState } from "react";
-const Project2 = ({ activeProjectIndex, projectData }) => {
+const project2 = ({ activeProjectIndex, projectData }) => {
   const projectImages = [
     {
       src: mainPage,
@@ -143,4 +143,4 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
   );
 };
 
-export default Project2;
+export default project2;
