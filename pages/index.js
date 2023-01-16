@@ -5,14 +5,14 @@ import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export async function getServerSideProps(context) {
-  return {
-    redirect: {
-      permanent: false,
-      destination: "/portfolio",
-    },
-  };
-}
+// export async function getServerSideProps(context) {
+//   return {
+//     redirect: {
+//       permanent: false,
+//       destination: "/portfolio",
+//     },
+//   };
+// }
 
 const Index = () => {
   return <></>;
