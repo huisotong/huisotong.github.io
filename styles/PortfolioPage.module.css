@@ -6,12 +6,67 @@
 
 
 
-.buttonGroup {
+.skillsGroup {
   z-index: 23;
   right:15%;
-  position: fixed;
-  top: calc(50% - 100px);
+  position: absolute;
+  top: calc(27%);
+  left: 45%;
   display: block;
+  height: 46%;
+  width: 40%;
+  font-family: 'Anybody';
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.skillsHeader, .skillsBody{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  float: left;
+  margin: 0;
+  font-size: 20px;
+}
+.skillsHeader {
+  font-size: 35px;
+  height: 20%;
+  padding-left: 2%;
+}
+.skillsBody {
+  height: auto;
+}
+
+
+.skillsName , .skillsBarGroup {
+  height: auto;
+  margin: 0;
+  display: block;
+  float: left;
+  line-height: 30px;
+  padding-left: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.skillsName{
+  width: 30%;
+  background-color: red;
+  opacity: 0.5;
+}
+.skillsBarGroup {
+  width: 70%;
+  background-color: blue;
+  opacity: 0.5;
+}
+.skillsBar{
+  width: 98%;
+  background-color: transparent;
+  border:2px solid white;
+  height: 100%;
 }
 
 .navBar {

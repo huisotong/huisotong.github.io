@@ -1,19 +1,27 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "@next/font/google";
 import styles from "../styles/PortfolioPage.module.css";
 import { useEffect, useState } from "react";
-import navbarData from '../components/navBar/navBarData';
+import navbarData from "../components/navBar/navBarData";
+import SkillsData from "../components/skills/SkillsData";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [knownLanguages, setKnownLanguages] = useState(["JS", "HTML","CSS","MySQL","NextJS","ReactJS"])
+  const [knownLanguages, setKnownLanguages] = useState([
+    "JS",
+    "HTML",
+    "CSS",
+    "MySQL",
+    "NextJS",
+    "ReactJS",
+  ]);
   const [typewriterText, setTypewriterText] = useState([
     "Pure CSS and JS",
     "NEXT.JS framework",
   ]);
-  const [currentTypewriterText, setCurrentTypewriterText] = useState(0)
+  const [currentTypewriterText, setCurrentTypewriterText] = useState(0);
   const [flickerSignage, setFlickerSignage] = useState("OPEN");
 
   useEffect(() => {
@@ -25,13 +33,13 @@ export default function Home() {
       }
     }, 5000);
     return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentTypewriterText]);
   // const divStyle = {
   //   color: "blue",
   //   backgroundImage: "url(" + "../public/backgroundImg.jpg" + ")",
   //   layout:"fill"
-    
+
   // };
   return (
     <>
@@ -49,17 +57,42 @@ export default function Home() {
             {typewriterText[currentTypewriterText]}
           </p>
           <p>with 0 packages.</p>
-          {/* <p>{navbarData[0].label}</p> */}
         </div>
-        <div className={styles.buttonGroup}>
-          {navbarData.map((element, index) => {
+        <div className={styles.skillsGroup}>
+          {/* {navbarData.map((element, index) => {
             // eslint-disable-next-line react/jsx-key
             return (
               <button className={styles.button} key={index}>
                 {navbarData[index].label}
               </button>
             );
-          })}
+          })} */}
+          <div className={styles.skillsHeader}>
+            <u>
+              <p>My skills</p>
+            </u>
+          </div>
+          <div className={styles.skillsBody}>
+            <div className={styles.skillsName}>
+              {SkillsData.map((element, index) => {
+                // eslint-disable-next-line react/jsx-key
+                return <p key={index}>{SkillsData[index].label}</p>;
+              })}
+            </div>
+            <div className={styles.skillsBarGroup}>
+              {SkillsData.map((element, index) => {
+                // eslint-disable-next-line react/jsx-key
+                {/* return <p key={index}>{SkillsData[index].percentage}</p>; */ }
+                return (
+                  <p key={index}>
+                    <button className={styles.skillsBar}>
+                      {SkillsData[index].percentage}
+                    </button>
+                  </p>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </main>
     </>
