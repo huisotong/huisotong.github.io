@@ -24,6 +24,7 @@
 
 
 .skillsHeader, .skillsBody{
+  color: white;
   width: 100%;
   align-items: center;
   display: flex;
@@ -54,20 +55,49 @@
 
 .skillsName{
   width: 30%;
-  background-color: red;
-  opacity: 0.5;
+  /* background-color: red; */
+  /* opacity: 0.5; */
 }
 .skillsBarGroup {
   width: 70%;
-  background-color: blue;
-  opacity: 0.5;
+  /* background-color: blue; */
+  /* opacity: 0.5; */
 }
-.skillsBar{
+.skillsBarOutline{
+  position: relative;
+  border-radius: 5px;
   width: 98%;
   background-color: transparent;
   border:2px solid white;
+  background-color: white;
   height: 100%;
+  color: transparent;
 }
+.skillsBar{
+  position: absolute;
+  left: 30%;
+  margin-left: 2%;
+  margin-top: 6.3px;
+  border-radius: 5px;
+  width: 66.7%;
+  background-color: transparent;
+  border:2px solid white;
+  color: transparent;
+  background-color: transparent;
+  height: 19.6px;
+}
+/* .skillsBar::before{
+  position: absolute;
+  content: "";
+  border-radius: 5px;
+  width: 100%;
+  background-color: transparent;
+  top: -2px;
+  left: -2px;
+  border:2px solid white;
+  background-color: transparent;
+  height: 100%;
+} */
 
 .navBar {
   z-index: 23;

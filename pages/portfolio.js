@@ -85,6 +85,9 @@ export default function Home() {
                 {/* return <p key={index}>{SkillsData[index].percentage}</p>; */ }
                 return (
                   <p key={index}>
+                    <button className={styles.skillsBarOutline} style={{width:`${SkillsData[index].percentage}%`}}>
+                      {SkillsData[index].percentage}
+                    </button>
                     <button className={styles.skillsBar}>
                       {SkillsData[index].percentage}
                     </button>
