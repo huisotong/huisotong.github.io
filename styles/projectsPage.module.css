@@ -201,7 +201,7 @@
     bottom: -8%;
     border: 2px solid white;
     border-top: 2px solid var(--projectSelectorDateShadow);
-    border-radius: var(--projectSelectorDateBorderRadius);
+    border-radius: var(--projectSelectorDateShadowRadius);
     height: 100%;
     z-index: 20;
 

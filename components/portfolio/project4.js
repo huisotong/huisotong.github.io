@@ -34,12 +34,9 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
           />
           <u>Tasks</u>
           <br />
-          While working as an application developer intern for ABC Cooking
-          Studio, I worked on a Point-Of-Sale system and its admin system,
-          developed by another batch of students. I was tasked to resolve
-          existing bugs, improve code quality, and develop and implement new
-          features. The application was intended to intended to replace the
-          existing outsourced POS system in all outlets.
+          Having my portfolio previously hosted and showcased on wix.com,
+          I wanted to put my skills to use and develop a website I could 
+          call mine. I started of by planning out page ideas.
           <br />
           <br />
           <br />
@@ -140,7 +137,7 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
           that more complex codes weren&lsquo;t explained with comments made it
           harder to understand and resolve bugs if it came with comments of
           explanation
-          
+
           <br />
         </small>
       </p>
