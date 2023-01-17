@@ -9,15 +9,15 @@ const SkillsData = [
   },
   {
     label: "Javascript",
-    percentage: "60",
+    percentage: "70",
   },
   {
     label: "HTML",
-    percentage: "50",
+    percentage: "60",
   },
   {
     label: "CSS",
-    percentage: "60",
+    percentage: "50",
   },
 ];
 

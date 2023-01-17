@@ -52,7 +52,7 @@ export default function Home() {
       <main>
         <div className={styles.mainText}>
           <p>This page </p>
-          <p style={{ marginBottom: "5px" }}>was built on</p>
+          <p style={{ marginBottom: "5px",marginTop:"5px" }}>was built on</p>
           <p className={styles.typewriterText}>
             {typewriterText[currentTypewriterText]}
           </p>
@@ -85,10 +85,10 @@ export default function Home() {
                 {/* return <p key={index}>{SkillsData[index].percentage}</p>; */ }
                 return (
                   <p key={index}>
-                    <button className={styles.skillsBarOutline} style={{width:`${SkillsData[index].percentage}%`}}>
+                    <button className={styles.skillsBar} style={{width:`${SkillsData[index].percentage}%`}}>
                       {SkillsData[index].percentage}
                     </button>
-                    <button className={styles.skillsBar}>
+                    <button className={styles.skillsBarOutline}>
                       {SkillsData[index].percentage}
                     </button>
                   </p>
