@@ -48,7 +48,7 @@ export default function Projects() {
             <Image
               src="/leftArrow.svg"
               alt="LeftArrow Icon"
-              className={styles.projectCycleNavigationButtonIcon}
+              className={styles.projectCycleNavigationButtonIconLeft}
               width={50}
               height={50}
             />
@@ -76,7 +76,7 @@ export default function Projects() {
             <Image
               src="/rightArrow.svg"
               alt="RightArrow Icon"
-              className={styles.projectCycleNavigationButtonIcon}
+              className={styles.projectCycleNavigationButtonIconRight}
               width={50}
               height={50}
             />
