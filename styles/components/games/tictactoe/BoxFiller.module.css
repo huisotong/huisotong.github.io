@@ -1,0 +1,65 @@
+.ticTacToeBoardX1{
+    left: 50%;
+    position: absolute;
+    background-color: black;
+    height: 90%;
+    width: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    transform: rotate(-35deg);
+}
+.ticTacToeBoardX1::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    left: -3px;
+    bottom: 3px;
+}
+
+.ticTacToeBoardX2{
+    left: 50%;
+    position: absolute;
+    background-color: black;
+    height: 90%;
+    width: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    transform: rotate(35deg);
+}
+.ticTacToeBoardX2::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    left: -3px;
+}
+.ticTacToeBoardO{
+    left: 0;
+    position: absolute;
+    background-color: transparent;
+    border: 5px solid black;
+    height: 80%;
+    width: 60%;
+    border-radius: 45%;
+    margin-top: 13%;
+    margin-bottom: 7%;
+    margin-left: 20%;
+}
+.ticTacToeBoardO::before{
+    content: "";
+    left: -8px;
+    top: -8px;
+    position: absolute;
+    background-color: transparent;
+    border: 5px solid white;
+    height: 100%;
+    width: 100%;
+    border-radius: 45%;
+}
