@@ -35,8 +35,10 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
 
       else if (getWinningNumber !== 9) {
         indexChosen = getWinningNumber
+        alert("I win!!!!")
       } else if (stopWinningNumber !== 9) {
         indexChosen = stopWinningNumber
+        alert("I saw that coming!")
       }
       else if (humanCornersOccupied >= 2) {
         if (humanHistory.includes("0") && humanHistory.includes("2") && table[1] === "") {
@@ -102,6 +104,7 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
       // code block
       break;
     default:
+      alert("Again Againn!")
       indexChosen = 10
     // code block
   }

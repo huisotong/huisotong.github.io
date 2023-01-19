@@ -92,7 +92,7 @@ export default function Tictactoe() {
                 <div className={styles.mainArea}>
                     <div className={styles.ticTacToeTitle}>
 
-                        <button onClick={() => { handleReset() }}>Reset</button>
+                        <button  className={styles.resetButton} onClick={() => { handleReset() }}>Reset</button>
                     </div>
                     <div className={styles.ticTacToeArea}>
                         <div className={styles.ticTacToeBoardArea}>
