@@ -48,9 +48,9 @@ export default function Tictactoe() {
                 // }
                 setTotalTurns(totalTurns + 1)
                 setPlayerTurn(false)
-                let newHumanHistory =`${humanHistory}${index}`
+                let newHumanHistory = `${humanHistory}${index}`
                 setHumanHistory(newHumanHistory)
-                handleComputerTurn(newTable, totalTurns + 1, computer, computerHistory,newHumanHistory)
+                handleComputerTurn(newTable, totalTurns + 1, computer, computerHistory, newHumanHistory)
             } else {
                 alert("Box already filled")
             }
@@ -60,17 +60,22 @@ export default function Tictactoe() {
 
 
     };
-    const handleComputerTurn = (table, totalTurns, computer, computerHistory,humanHistory) => {
+    const handleComputerTurn = (table, totalTurns, computer, computerHistory, humanHistory) => {
         console.log("Hmm let me think...")
         console.log(table)
         setTimeout(function () {
-            let indexChosen = computerTurn(table, totalTurns, computer, computerHistory,humanHistory)
-            let newTable = [...table];
-            newTable[indexChosen] = computer;
-            setTable(newTable)
-            setComputerHistory(`${computerHistory}${indexChosen}`)
-            setTotalTurns(totalTurns + 1)
-            setPlayerTurn(true)
+            let indexChosen = computerTurn(table, totalTurns, computer, computerHistory, humanHistory)
+            if (indexChosen === 10) {
+                handleReset()
+            } else {
+                let newTable = [...table];
+                newTable[indexChosen] = computer;
+                setTable(newTable)
+                setComputerHistory(`${computerHistory}${indexChosen}`)
+                setTotalTurns(totalTurns + 1)
+                setPlayerTurn(true)
+            }
+
         }, 3000);
     }
     return (
@@ -87,7 +92,7 @@ export default function Tictactoe() {
                 <div className={styles.mainArea}>
                     <div className={styles.ticTacToeTitle}>
 
-                    <button onClick={()=>{handleReset()}}>Reset</button>
+                        <button onClick={() => { handleReset() }}>Reset</button>
                     </div>
                     <div className={styles.ticTacToeArea}>
                         <div className={styles.ticTacToeBoardArea}>

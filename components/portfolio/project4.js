@@ -18,6 +18,7 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
     >
       <h2>{projectData[3].name}</h2>
       <p>Built on Next.JS, HTML and css. Pictures included!</p>
+      <p>Duration: 2 Weeks (After work)</p>
       <br />
       <p>
         <small>

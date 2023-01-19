@@ -21,6 +21,7 @@ const Project1 = ({ activeProjectIndex, projectData }) => {
       <div>
         <h2>{projectData[0].name}</h2>
         <p>Built on React.Js, HTML {"&"} CSS!</p>
+        <p>Duration: 5 months (Alongside daily lectures)</p>
         <br />
         <p>
           <small>

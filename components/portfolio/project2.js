@@ -72,6 +72,7 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
         </a>{" "}
         (unstable hosting)
       </p>
+      <p>Duration: 3 days</p>
       <br />
       <p>
         <small>
