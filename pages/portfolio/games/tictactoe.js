@@ -33,6 +33,7 @@ export default function Tictactoe() {
         setComputerHistory("")
         setHumanHistory("")
         setTotalTurns(0)
+        setPlayerTurn(true)
     };
     const handleTurn = (index, currentTurn, playerTurn) => {
         if (playerTurn === true) {
@@ -49,7 +50,7 @@ export default function Tictactoe() {
                 setPlayerTurn(false)
                 let newHumanHistory =`${humanHistory}${index}`
                 setHumanHistory(newHumanHistory)
-                handleComputerTurn(newTable, totalTurns, computer, computerHistory,newHumanHistory)
+                handleComputerTurn(newTable, totalTurns + 1, computer, computerHistory,newHumanHistory)
             } else {
                 alert("Box already filled")
             }
@@ -86,7 +87,7 @@ export default function Tictactoe() {
                 <div className={styles.mainArea}>
                     <div className={styles.ticTacToeTitle}>
 
-                    <button onClick={()=>{console.log("table",table)}}>click</button>
+                    <button onClick={()=>{handleReset()}}>Reset</button>
                     </div>
                     <div className={styles.ticTacToeArea}>
                         <div className={styles.ticTacToeBoardArea}>

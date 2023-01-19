@@ -2,7 +2,6 @@
 .ticTacToeBoardBox1{
     height:calc(30% - 5px);
     width: calc(30% - 5px);
-    background-color: brown;
     position: absolute;
     cursor: pointer;
 }
@@ -11,7 +10,6 @@
     left: 35%;
     height:calc(30% - 5px);
     width: calc(30% - 5px);
-    background-color: brown;
     cursor: pointer;
 }
 
@@ -20,14 +18,12 @@
     right: 0;
     height:calc(30% - 5px);
     width: 30%;
-    background-color: brown;
     cursor: pointer;
 }
 .ticTacToeBoardBox4{
     height:calc(30% - 5px);
     width: 30%;
     top: 35%;
-    background-color: brown;
     position: absolute;
     cursor: pointer;
 }
@@ -37,7 +33,6 @@
     top: 35%;
     height:calc(30% - 5px);
     width: calc(30% - 5px);
-    background-color: brown;
     cursor: pointer;
 }
 .ticTacToeBoardBox6{
@@ -46,14 +41,12 @@
     top: 35%;
     height:calc(30% - 5px);
     width: 30%;
-    background-color: brown;
     cursor: pointer;
 }
 .ticTacToeBoardBox7{
     height:30%;
     width: calc(30% - 5px);
     bottom: 0;
-    background-color: brown;
     position: absolute;
     cursor: pointer;
 }
@@ -63,7 +56,6 @@
     bottom: 0;
     height:30%;
     width: calc(30% - 5px);
-    background-color: brown;
     cursor: pointer;
 }
 .ticTacToeBoardBox9{
@@ -72,6 +64,5 @@
     bottom: 0;
     height:30%;
     width: 30%;
-    background-color: brown;
     cursor: pointer;
 }

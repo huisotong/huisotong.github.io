@@ -4,6 +4,19 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
   //index of corners
   let corners = [0, 2, 6, 8]
   let connecter = [1, 3, 5, 7]
+  let cornersOccupied = 0
+  let humanCornersOccupied = 0
+  let i = 0
+  console.log("totalturn", totalTurns)
+  while (i < corners.length) {
+    if (computerHistory.includes(corners[i])) {
+      cornersOccupied += 1
+    }
+    if (humanHistory.includes(corners[i])) {
+      humanCornersOccupied += 1
+    }
+    i++
+  }
   switch (totalTurns) {
     case 0:
       indexChosen = corners[Math.floor(Math.random() * 3)];
@@ -12,17 +25,24 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
     case 3:
     case 4:
     case 5:
+    case 6:
+    case 7:
+    case 8:
       let stopWinningNumber = winningNumber(humanHistory, table)
       let getWinningNumber = winningNumber(computerHistory, table)
-      if (getWinningNumber !== 9) {
+      if (totalTurns === 1 && table[4] === "" && humanCornersOccupied === 1) {
+        indexChosen = 4
+      }
+      else if (totalTurns === 3 && humanCornersOccupied === 2 && getWinningNumber === 9) {
+        indexChosen = connecter[Math.floor(Math.random() * 3)];
+      }
+      else if (getWinningNumber !== 9) {
         indexChosen = getWinningNumber
       } else if (stopWinningNumber !== 9) {
         indexChosen = stopWinningNumber
       }
       else if (stopWinningNumber === 9) {
-        let cornersOccupied = 0
-        let humanCornersOccupied = 0
-        let i = 0
+
         while (i < corners.length) {
           if (computerHistory.includes(corners[i])) {
             cornersOccupied += 1
@@ -32,8 +52,8 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
           }
           i++
         }
-        
-        if (table[4] === "" && ((humanHistory.includes("1") && humanHistory.includes("3")) || (humanHistory.includes("1") && humanHistory.includes("5")) || (humanHistory.includes("1") && humanHistory.includes("7"))|| (humanHistory.includes("3") && humanHistory.includes("5"))|| (humanHistory.includes("7") && humanHistory.includes("3"))|| (humanHistory.includes("7") && humanHistory.includes("5")))) {
+
+        if (table[4] === "" && ((humanHistory.includes("1") && humanHistory.includes("3")) || (humanHistory.includes("1") && humanHistory.includes("5")) || (humanHistory.includes("1") && humanHistory.includes("7")) || (humanHistory.includes("3") && humanHistory.includes("5")) || (humanHistory.includes("7") && humanHistory.includes("3")) || (humanHistory.includes("7") && humanHistory.includes("5")))) {
           indexChosen = 4
         }
         else if (humanCornersOccupied >= 2) {
@@ -63,14 +83,6 @@ export default function computerTurn(table, totalTurns, computer, computerHistor
 
       }
 
-      // code block
-      break;
-    case 6:
-    case 7:
-      // code block
-      break;
-    case 8:
-    case 9:
       // code block
       break;
     default:
