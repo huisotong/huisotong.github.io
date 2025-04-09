@@ -70,7 +70,7 @@ const Project2 = ({ activeProjectIndex, projectData }) => {
             <u>here</u>
           </i>
         </a>{" "}
-        (unstable hosting)
+        (unstable hosting but image carousel provided below)
       </p>
       <p>Duration: 3 days</p>
       <br />
