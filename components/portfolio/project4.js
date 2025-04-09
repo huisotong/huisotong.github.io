@@ -17,12 +17,12 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
       }
     >
       <h2>{projectData[3].name}</h2>
-      <p>Built on Next.JS, HTML and css. Pictures included!</p>
+      <p>Built on Next.JS, HTML and css.</p>
       <p>Duration: 2 Weeks (After work)</p>
       <br />
       <p>
         <small>
-          <Image
+          {/* <Image
             src={cashierPage}
             alt="Picture of the Cashier page"
             style={{
@@ -32,13 +32,13 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
             }}
             width={470.8}
             height={327.2}
-          />
+          /> */}
           <u>Tasks</u>
           <br />
           Having my portfolio previously hosted and showcased on wix.com,
           I wanted to put my skills to use and develop a website I could 
           call mine. I started of by planning out page ideas.
-          <br />
+          {/* <br />
           <br />
           <br />
           <Image
@@ -139,7 +139,7 @@ const Project4 = ({ activeProjectIndex, projectData }) => {
           harder to understand and resolve bugs if it came with comments of
           explanation
 
-          <br />
+          <br /> */}
         </small>
       </p>
     </div>
