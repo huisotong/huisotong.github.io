@@ -20,8 +20,12 @@ const SkillsData = [
     percentage: "70",
   },
   {
+    label: "Kotlin",
+    percentage: "70",
+  },
+  {
     label: "CSS",
-    percentage: "50",
+    percentage: "70",
   },
 ];
 

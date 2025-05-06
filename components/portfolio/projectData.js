@@ -24,6 +24,10 @@ const ProjectData = [
     name: "Job Search & Hiring Website",
     date: "29/11/2024",
   },
+  {
+    name: "Meal planning Mobile App",
+    date: "08/3/2025",
+  },
 ];
 
 export default ProjectData;
