@@ -5,7 +5,7 @@ const SkillsData = [
   },
   {
     label: "React.Js",
-    percentage: "70",
+    percentage: "80",
   },
   {
     label: "Javascript",
@@ -13,7 +13,11 @@ const SkillsData = [
   },
   {
     label: "HTML",
-    percentage: "60",
+    percentage: "70",
+  },
+  {
+    label: "Python",
+    percentage: "70",
   },
   {
     label: "CSS",
