@@ -16,6 +16,10 @@ const ProjectData = [
     name: "Portfolio Website",
     date: "07/04/2022",
   },
+  {
+    name: "Pet supplies E-commerce Website",
+    date: "14/03/2024",
+  },
 ];
 
 export default ProjectData;

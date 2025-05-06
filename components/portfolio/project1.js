@@ -95,6 +95,17 @@ const Project1 = ({ activeProjectIndex, projectData }) => {
             {/* <video>
                 <source src={videoDemo} type="video/mp4" />
               </video> */}
+            <video
+              width="600"
+              controls
+              style={{
+                display: "block",
+                margin: "20px auto",
+              }}
+            >
+              <source src="/projects/project1/videoDemo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </small>
         </p>
       </div>
