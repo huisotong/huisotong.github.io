@@ -1,11 +1,9 @@
 import Image from "next/image";
 import styles from "../../styles/projectsPage.module.css";
 import homePage from "../../public/projects/project5/homePage.png";
-import cancelModal from "../../public/projects/project3/cancelModal.jpg";
 import allProductsPage from "../../public/projects/project5/allProductsPage.png";
 import cartPage from "../../public/projects/project5/cartPage.png";
 import productPage from "../../public/projects/project5/productPage.png";
-import transactionSummaryModal from "../../public/projects/project3/transactionSummaryModal.jpg";
 
 const Project5 = ({ activeProjectIndex, projectData }) => {
   return (
@@ -19,7 +17,7 @@ const Project5 = ({ activeProjectIndex, projectData }) => {
     >
       <h2>{projectData[4].name}</h2>
       <p>Built on HTML, CSS, JavaScript, PHP, MySQL</p>
-      <p>Duration: 1 months</p>
+      <p>Duration: 1 months (Alongside other trimester modules)</p>
       <br />
       <p>
         <small>
@@ -57,19 +55,6 @@ const Project5 = ({ activeProjectIndex, projectData }) => {
           <br />
           - Database Design
           <br />- API Development Debugging and Logging
-          {/* <Image
-            src={homePage}
-            alt="Picture of the navigation bar"
-            style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-              marginTop: "15px",
-              marginBottom: "15px",
-              maxWidth: "50%", // Adjust this percentage as needed
-              height: "auto", // Maintain aspect ratio
-            }}
-          /> */}
           <br />
           <br />
           <Image
