@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "../../styles/projectsPage.module.css";
+import homePage from "../../public/projects/project5/homePage.png";
 import cancelModal from "../../public/projects/project3/cancelModal.jpg";
-import cashierPage from "../../public/projects/project3/cashierPage.jpg";
-import paymentModal from "../../public/projects/project3/paymentModal.jpg";
-import paymentTypeModal from "../../public/projects/project3/paymentTypeModal.jpg";
+import allProductsPage from "../../public/projects/project5/allProductsPage.png";
+import cartPage from "../../public/projects/project5/cartPage.png";
+import productPage from "../../public/projects/project5/productPage.png";
 import transactionSummaryModal from "../../public/projects/project3/transactionSummaryModal.jpg";
 
 const Project5 = ({ activeProjectIndex, projectData }) => {
@@ -16,129 +17,157 @@ const Project5 = ({ activeProjectIndex, projectData }) => {
           : { marginTop: "60%", transition: "1s", opacity: "0" }
       }
     >
-      <h2>{projectData[2].name}</h2>
+      <h2>{projectData[4].name}</h2>
       <p>Built on HTML, CSS, JavaScript, PHP, MySQL</p>
       <p>Duration: 1 months</p>
       <br />
       <p>
         <small>
-          <Image
-            src={cashierPage}
-            alt="Picture of the Cashier page"
-            style={{
-              float: "left",
-              marginRight: "10px",
-              marginTop: "10px",
-            }}
-            width={470.8}
-            height={327.2}
-          />
-          <u>Tasks</u>
+          <u>Purpose</u>
           <br />
           This Website is an online platform for pet owners to source supplies
           for their pets whenever and wherever. It offers an extensive catalogue
           of pet-related supplies, such as pet food, toys and consumables.
           <br />
+          <video
+            width="900"
+            controls
+            style={{
+              display: "block",
+              margin: "20px auto",
+            }}
+          >
+            <source
+              src="/projects/project5/petStoreDemo.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <u>Responsibilities</u>
+          <br />
+          - Home Page Development
+          <br />
+          - Product Listing Page (Dynamic)
+          <br />
+          - Individual Product Page (Dynamic)
+          <br />
+          - Cart Page (Dynamic)
+          <br />
+          - Add to Cart Functionality
+          <br />
+          - Database Design
+          <br />- API Development Debugging and Logging
+          {/* <Image
+            src={homePage}
+            alt="Picture of the navigation bar"
+            style={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: "15px",
+              marginBottom: "15px",
+              maxWidth: "50%", // Adjust this percentage as needed
+              height: "auto", // Maintain aspect ratio
+            }}
+          /> */}
           <br />
           <br />
           <Image
-            src={paymentTypeModal}
-            alt="Picture of the Cashier page"
+            src={homePage}
+            alt="Picture of the navigation bar"
             style={{
               float: "right",
               marginRight: "10px",
               marginTop: "10px",
             }}
-            width={470.8}
-            height={327.2}
+            width={500}
+            height={283.46}
           />
+          <u>Home Page</u>
+          <br />
+          I designed and implemented a dynamic featured products section that
+          refreshes upon page reload. Integrated functionality to allow users to
+          add products to the cart or navigate to individual product pages
+          directly from the home page.
           <br />
           <br />
-          <br />
-          <u>Preparation</u>
-          <br />
-          Since I had roughly a week before my internship, I took the time to
-          read through the tech stacks and realised that I was unfamiliar with
-          the framework, Next.Js. So I read documentation, watched videos from
-          &quot;The Net Ninja&quot; on YouTube and practised.
           <Image
-            src={paymentModal}
+            src={allProductsPage}
             alt="Picture of the Cashier page"
             style={{
               float: "left",
               marginRight: "10px",
               marginTop: "10px",
             }}
-            width={470.8}
-            height={327.2}
+            width={557}
+            height={340.46}
           />
           <br />
+          <u>Product Listing Page</u>
           <br />
-          <u>Process</u>
-          <br />
-          After being assigned a feature, I would create a new branch, complete
-          the feature, check with the project manager for approval of the UI,
-          submit a pull request and undergo a code review with senior developers
-          if the feature is more complex. During the code review, I would be
-          told about ways I could improve my code efficiency and readability.
-          After code reviews and resolving comments raised on GIT, I would
-          commit the branch to master and work on another feature.
-          <Image
-            src={transactionSummaryModal}
-            alt="Picture of the Cashier page"
-            style={{
-              float: "left",
-              marginRight: "10px",
-              marginTop: "10px",
-            }}
-            width={470.8}
-            height={327.2}
-          />
-          <br />
-          <br />
-          <u>Task examples</u>
-          <br />
-          Datatables + sever side pagination + filters
-          <br />
-          Cronjob + Uploading files to sftp server
-          <br />
-          Autopopulation remaining amount of payment
-          <br />
-          Receipt formatting and printing
-          <br />
-          Authentication checks for members and staff
-          <br />
-          Search Bar
-          <br />
-          <br />
+          For the product listing page, I have developed a dynamic product
+          listing page that fetches product data from the database and displays
+          it based on categories. In addition, I have also implemented filtering
+          functionality and hover effects to enhance user interaction.
           <br />
           <br />
           <br />
           <Image
-            src={cancelModal}
+            src={productPage}
             alt="Picture of the Cashier page"
             style={{
               float: "right",
               marginRight: "10px",
               marginTop: "10px",
             }}
-            width={470.8}
-            height={327.2}
+            width={557}
+            height={340.46}
           />
-          <u>Challenges</u>
+          <u>Product page</u>
           <br />
-          One of the main challenges was Javascript and Next.Js fraMEWORK.
-          Despite having experience with Javascript, there were still many
-          functions I was unaware of that could have potentially reduced lines
-          of code and concepts I was unsure about. Unlike Javascript, I had no
-          experience in Next.Js other than the simple practices I did. To me,
-          documentations and videos weren&lsquo;t the only things that helped
-          me. As I was coding, I also learned a lot through reading other
-          features developed by the students and understanding how they utilised
-          certain functions. But that was where another challenge was. The fact
-          that more complex codes weren&lsquo;t explained with comments made it
-          harder to understand and resolve bugs if it came with comments of
-          explanation
+          For the individual product page, I have built a dynamic product page
+          that displays detailed product information, including descriptions,
+          pricing, and reviews. Added functionality to allow users to add
+          multiple quantities of a product to the cart. Implemented a
+          recommendation system to display four related products based on the
+          current product&apos;s category.
+          <br />
+          <br />
+          <br />
+          <u>Add to Cart Functionality</u>
+          <br />
+          For the Add-To-Cart functionality, I utilised sessionStorage to track
+          products added to the cart during the session. Integrated visual
+          feedback, such as updating the cart count in the navigation bar and
+          blinking the cart icon.
+          <br />
+          <br />
+          <Image
+            src={cartPage}
+            alt="Picture of the Cashier page"
+            style={{
+              float: "left",
+              marginRight: "10px",
+              marginTop: "10px",
+            }}
+            width={500}
+            height={283.46}
+          />
+          <u>Cart Page</u>
+          <br />
+          I have also created a dynamic cart page that displays all products
+          added to the cart, including their quantity, price, and total cost.
+          Implemented features to edit product quantities, delete products, and
+          calculate the total cart value dynamically.
+          <br />
+          <br />
+          <br />
+          <u>Database Design and API Development</u>
+          <br />
+          I created the database schema and tables to store product, user, and
+          transaction data. Wrote SQL statements to populate the database with
+          mock data. Developed API endpoints in dbConnection.php to handle GET
+          and POST requests for retrieving and updating data.
           <br />
         </small>
       </p>

@@ -96,7 +96,7 @@ const Project1 = ({ activeProjectIndex, projectData }) => {
                 <source src={videoDemo} type="video/mp4" />
               </video> */}
             <video
-              width="600"
+              width="900"
               controls
               style={{
                 display: "block",
