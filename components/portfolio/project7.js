@@ -12,7 +12,7 @@ const Project7 = ({ activeProjectIndex, projectData }) => {
           : { marginTop: "60%", transition: "1s", opacity: "0" }
       }
     >
-      <h2>{projectData[5].name}</h2>
+      <h2>{projectData[6].name}</h2>
       <p>Duration: 1 months (Alongside other trimester modules)</p>
       <p>
         Built on Kotlin with Jetpack Compose, Gemini AI for recipe generation
