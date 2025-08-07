@@ -151,11 +151,18 @@
 .projectSelectorName1,
 .projectSelectorName2,
 .projectSelectorName3 {
+    top: 0;
     width: 20%;
     color: white;
     position: absolute;
     text-align: center;
     font-family: 'Mulish';
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
 }
 
 .projectSelectorName1 {
