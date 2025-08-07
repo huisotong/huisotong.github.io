@@ -28,11 +28,13 @@ const Project5 = ({ activeProjectIndex, projectData }) => {
           of pet-related supplies, such as pet food, toys and consumables.
           <br />
           <video
-            width="900"
             controls
             style={{
               display: "block",
               margin: "20px auto",
+              maxWidth: "100%",
+              height: "auto",
+              marginTop: "20px",
             }}
           >
             <source

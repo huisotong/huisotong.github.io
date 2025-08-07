@@ -13,6 +13,7 @@ import Project4 from "../../components/portfolio/project4";
 import Project5 from "../../components/portfolio/project5";
 import Project6 from "../../components/portfolio/project6";
 import Project7 from "../../components/portfolio/project7";
+import Project8 from "../../components/portfolio/project8";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function Projects() {
@@ -183,6 +184,11 @@ export default function Projects() {
         />
 
         <Project7
+          activeProjectIndex={activeProjectIndex}
+          projectData={ProjectData}
+        />
+
+        <Project8
           activeProjectIndex={activeProjectIndex}
           projectData={ProjectData}
         />
