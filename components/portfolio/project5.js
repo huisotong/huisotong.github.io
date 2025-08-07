@@ -17,7 +17,7 @@ const Project5 = ({ activeProjectIndex, projectData }) => {
     >
       <h2>{projectData[4].name}</h2>
       <p>Built on HTML, CSS, JavaScript, PHP, MySQL</p>
-      <p>Duration: 1 months (Alongside other trimester modules)</p>
+      <p>Duration: 3 months (Alongside other trimester modules)</p>
       <br />
       <p>
         <small>
